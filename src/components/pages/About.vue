@@ -15,13 +15,13 @@
                 class="relative overflow-hidden h-screen"
             >
                 <img src="@/assets/images/about-image.png" class="md:w-full md:h-auto min-h-full grayscale brightness-150 md:absolute bottom-0 left-0">
-                <div class="absolute inline-block top-1/2 -translate-y-1/2 right-5 md:w-3/5 text-right">
-                    <div class="absolute -top-5 -left-5 border-8 border-r-0 border-b-0 border-yellow w-10 h-10"></div>
+                <div class="absolute inline-block top-1/2 -translate-y-1/2 md:right-5 md:w-3/5 text-right">
+                    <div class="absolute md:-top-5 md:-left-5 border-8 border-r-0 border-b-0 border-yellow w-10 h-10"></div>
                     <div class="bg-white bg-opacity-60 rounded pt-8 pb-10 px-10 mb-5 text-left">
-                        <div class="text-grey2 md:text-6xl text-base font-bold mb-7">Our People Come First</div>
-                        <div class="text-3xl font-semibold">We are independently owned, strategic creative agency forever curious and ready to transform the way business is done.</div>
+                        <div class="text-grey2 md:text-6xl text-sm font-bold mb-7">Our People Come First</div>
+                        <div class="text-sm md:ext-3xl font-semibold">We are independently owned, strategic creative agency forever curious and ready to transform the way business is done.</div>
                     </div>
-                    <button class="bg-yellow text-white text-2xl py-3 px-6 rounded">Learn More</button>
+                    <button class="bg-yellow text-white text-base md:text-2xl py-3 px-6 mr-1 md:mr-0 rounded">Learn More</button>
                 </div>
             </TransitionChild>
     </TransitionRoot>

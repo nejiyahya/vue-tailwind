@@ -3,7 +3,7 @@
 
         <div v-else class="min-h-screen md:grid md:grid-cols-5 gap-0">
             <div class="md:col-span-2 relative z-10">
-                <div :class="isChange?'animate-[sliding-down_400ms_ease-in-out]':'animate-[sliding-up_400ms_ease-in-out]'" class="bg-yellow h-12">
+                <div :class="isChange?'animate-[sliding-down_400ms_ease-in-out]':'animate-[sliding-up_400ms_ease-in-out]'" class="bg-yellow h-10 md:h-12">
                     <button class="text-white flex items-center text-base font-bold p-5 rounded" @click="gotoPage('home')">
                         <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
@@ -50,10 +50,15 @@
                 }
 
                 setTimeout(() => {
-                    this.page = param;
+                    if(this.page != param){
+                        this.page = param;
+                    }
                 }, 10)
 
                 setTimeout(() => {
+                    if(this.page == param){
+                        this[this.page].isShowing=true;
+                    }
                     this.isChange = true;
                 }, 300)
             }

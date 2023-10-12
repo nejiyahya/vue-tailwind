@@ -2,18 +2,18 @@
   <div ref="container" class="keen-slider">
     <div class="keen-slider__slide number-slide1 pr-9">
         <div class="bg-white bg-opacity-60 rounded pt-8 pb-11 px-10">
-            <div class="text-grey2 text-5xl font-bold mb-8">We Solve Your</div>
-            <div class="relative block text-5xl font-bold bg-clip-text text-yellow w-full">
-                <div class="absolute top-0 left-0 text-yellow w-full z-0">PROBLEM</div>
+            <div class="text-grey2 text-base md:text-5xl font-bold mb-8">We Solve Your</div>
+            <div class="relative inline-block text-base md:text-5xl font-bold bg-clip-text text-yellow">
+                <div class="relative text-yellow w-full z-0">PROBLEM</div>
                 <div class="absolute top-0 left-0 text-white w-full z-10 animate-[text_1500ms_ease-in-out_infinite] overflow-hidden">PROBLEM</div>
             </div>
         </div>
     </div>
     <div class="keen-slider__slide number-slide1 pr-9">
         <div class="bg-white bg-opacity-60 rounded pt-8 pb-10 px-10">
-            <div class="text-grey2 text-5xl font-bold mb-8">We Know You Have</div>
-            <div class="relative block text-5xl font-bold bg-clip-text text-yellow w-full">
-                <div class="absolute top-0 left-0 text-yellow w-full z-0">PROBLEM</div>
+            <div class="text-grey2 text-base md:text-5xl font-bold mb-8">We Know You Have</div>
+            <div class="relative inline-block text-base md:text-5xl font-bold bg-clip-text text-yellow">
+                <div class="relative text-yellow w-full z-0">PROBLEM</div>
                 <div class="absolute top-0 left-0 text-white w-full z-10 animate-[text_1500ms_ease-in-out_infinite] overflow-hidden">PROBLEM</div>
             </div>
         </div>

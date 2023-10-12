@@ -13,8 +13,8 @@
                 leave-to="-translate-y-full"
                 class="relative overflow-hidden h-screen"
             >
-                <img src="@/assets/images/product-image.png" class="w-full grayscale brightness-150 absolute bottom-0 left-0 z-0">
-                <div class="absolute inline-block top-1/2 -translate-y-1/2 right-5 w-3/5 z-10">
+                <img src="@/assets/images/product-image.png" class="md:w-full md:h-auto min-h-full grayscale brightness-150 md:absolute bottom-0 left-0">
+                <div class="absolute inline-block top-1/2 -translate-y-1/2 right-5 md:w-3/5 text-right">
                     <SliderProduct></SliderProduct>
                 </div>
             </TransitionChild>
