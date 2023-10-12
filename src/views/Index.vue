@@ -13,23 +13,23 @@
                 </div>
                 <div class="md:inline-block flex text-left md:absolute md:right-0 md:translate-x-1/2 md:top-1/2 md:-translate-y-1/2 mt-11 text-base md:text-6xl font-bold whitespace-nowrap">
                     <a @click.stop.prevent="gotoPage('about')" :class="{'text-yellow':page=='about','text-grey':page!='about'}" class="flex items-center mb-9 mx-2">
-                        <span :class="(page!='about'&&isChange?'invisible':'')+(isChange?' animate-[link-in_400ms_ease-in-out]':(prev=='about'?' animate-[link-out_400ms_ease-in-out]':'invisible'))" class="absolute -translate-x-full bg-yellow h-3 w-128 -ml-5"></span>
+                        <span :class="(page!='about'&&isChange?'invisible':'')+(isChange?' animate-[link-in_400ms_ease-in-out]':(prev=='about'?' animate-[link-out_400ms_ease-in-out]':'invisible'))" class="hidden md:block absolute -translate-x-full bg-yellow h-3 w-128 -ml-5"></span>
                         <span>About Us</span>
                     </a>
                     <a @click.stop.prevent="gotoPage('product')" :class="{'text-yellow':page=='product','text-grey':page!='product'}" class="flex items-center mb-9 mx-2 hover:opacity-60">
-                        <span :class="(page!='product'&&isChange?'invisible':'')+(isChange?' animate-[link-in_400ms_ease-in-out]':(prev=='product'?' animate-[link-out_400ms_ease-in-out]':'invisible'))" class="absolute -translate-x-full bg-yellow h-3 w-128 -ml-5"></span>
+                        <span :class="(page!='product'&&isChange?'invisible':'')+(isChange?' animate-[link-in_400ms_ease-in-out]':(prev=='product'?' animate-[link-out_400ms_ease-in-out]':'invisible'))" class="hidden md:block absolute -translate-x-full bg-yellow h-3 w-128 -ml-5"></span>
                         Our Product
                     </a>
                     <a @click.stop.prevent="gotoPage('contact')" :class="{'text-yellow':page=='contact','text-grey':page!='contact'}" class="flex items-center mb-9 mx-2 hover:opacity-60">
-                        <span :class="(page!='contact'&&isChange?'invisible':'')+(isChange?' animate-[link-in_400ms_ease-in-out]':(prev=='contact'?' animate-[link-out_400ms_ease-in-out]':'invisible'))" class="absolute -translate-x-full bg-yellow h-3 w-128 -ml-5"></span>
+                        <span :class="(page!='contact'&&isChange?'invisible':'')+(isChange?' animate-[link-in_400ms_ease-in-out]':(prev=='contact'?' animate-[link-out_400ms_ease-in-out]':'invisible'))" class="hidden md:block absolute -translate-x-full bg-yellow h-3 w-128 -ml-5"></span>
                         Contact Us
                     </a>
                 </div>
             </div>
 
-            <About v-if="page=='about'" ref="about"></About>
-            <Product v-else-if="page=='product'" ref="product"></Product>
-            <Contact v-else-if="page=='contact'" ref="contact"></Contact>
+            <About v-if="page=='about'" @goto-page="gotoPage" ref="about" :prev="prev"></About>
+            <Product v-else-if="page=='product'" ref="product" :prev="prev"></Product>
+            <Contact v-else-if="page=='contact'" ref="contact" :prev="prev"></Contact>
         </div>
 </template>
 

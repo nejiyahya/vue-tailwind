@@ -21,8 +21,8 @@
                     class="transition peer-hover:scale-105 peer-hover:translate-x-4 ease-in-out delay-300 duration-300 text-6xl md:text-8xl absolute z-10 font-bold text-yellow -top-7 md:-top-9 md:-left-9">
                         We Create
                     </div>
-                    <button class="group/button hover:bg-yellow text-yellow hover:text-white flex items-center absolute z-10 text-4xl md:text-7xl font-bold -bottom-7 md:-left-8 py-2 px-2 rounded"  @click="gotoPage('about')">
-                        <div class="group-hover:text-white group-hover/home:-translate-x-0 -translate-x-1000 duration-300 mr-2">AWESOME TGS</div>
+                    <button class="group/button hover:bg-yellow text-yellow hover:text-white flex items-center absolute z-10 text-4xl md:text-6xl font-bold -bottom-7 md:-left-8 py-2 px-2 rounded-md"  @click="this.$emit('gotoPage', 'about')">
+                        <div class="group-hover:text-white group-hover/home:-translate-x-0 -translate-x-1000 duration-300 mr-2">AWESOME THINGS</div>
                         <svg class="group-hover:text-white group-hover/home:-translate-x-0 translate-x-1000 duration-300 w-11" aria-h="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                         </svg>
@@ -45,15 +45,6 @@
         components:{
             TransitionRoot,
             TransitionChild
-        },
-        methods:{
-            gotoPage(page){
-                this.isShowing = true;
-                setTimeout(() => {
-                    this.$emit('gotoPage', page)
-                    this.isShowing = false;
-                }, 500)
-            }
         },
         setup(props) {
             const isShowing = ref(false)

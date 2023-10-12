@@ -7,11 +7,11 @@
         
             <TransitionChild
                 enter="transition ease-in-out duration-300 transform"
-                enter-from="translate-y-full"
-                enter-to="translate-y-0"
+                :enter-from="prev=='about'||prev=='home'?'translate-x-full':'translate-y-full'"
+                :enter-to="prev=='about'||prev=='home'?'translate-x-0':'translate-y-0'"
                 leave="transition ease-in-out duration-300 transform"
-                leave-from="translate-y-0"
-                leave-to="-translate-y-full"
+                :leave-from="prev=='about'||prev=='home'?'translate-x-0':'translate-y-0'"
+                :leave-to="prev=='about'||prev=='home'?'translate-x-full':'-translate-y-full'"
                 class="relative overflow-hidden h-screen"
             >
                 <img src="@/assets/images/about-image.png" class="md:w-full md:h-auto min-h-full grayscale brightness-150 md:absolute bottom-0 left-0">
@@ -21,7 +21,7 @@
                         <div class="text-grey2 md:text-6xl text-sm font-bold mb-7">Our People Come First</div>
                         <div class="text-sm md:ext-3xl font-semibold">We are independently owned, strategic creative agency forever curious and ready to transform the way business is done.</div>
                     </div>
-                    <button class="bg-yellow text-white text-base md:text-2xl py-3 px-6 mr-1 md:mr-0 rounded">Learn More</button>
+                    <button class="bg-yellow text-white text-base md:text-2xl py-3 px-6 mr-1 md:mr-0 rounded" @click="gotoPage('about')">Learn More</button>
                 </div>
             </TransitionChild>
     </TransitionRoot>
@@ -35,6 +35,16 @@
         components:{
             TransitionRoot,
             TransitionChild
+        },
+        props:['prev'],
+        methods:{
+            gotoPage(page){
+                this.isShowing = true;
+                setTimeout(() => {
+                    this.$emit('gotoPage', page)
+                    this.isShowing = false;
+                }, 500)
+            }
         },
         mounted(){
             this.$nextTick(function () {
